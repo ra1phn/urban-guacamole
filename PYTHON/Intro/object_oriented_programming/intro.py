@@ -42,9 +42,21 @@ class House:
     location=""
     architect="KIMANI"
 
+    def config(self, owner, location):
+        self.owner=owner
+        self.location=location
+
+
+    def print_self(self):
+        #this <the object itself>: self<object>
+        print(self)
+        print(self.__dict__) # dictionary (prints all items)
+
 # When accessing object properties use dot notation
 # Bracket notaiton is for dictionary
 
+# -method.config 
+# - print self
 ralph_house=House()
 ralph_house.owner="Ralph"
 ralph_house.location="Kikuyu"
@@ -55,6 +67,12 @@ print(f"Ralph's house bathrooms {ralph_house.bathrooms}")
 print(f"Ralph's house floors {ralph_house.floors}")
 print(f"Ralph's house area {ralph_house.area}")
 print(f"Ralph's house architect {ralph_house.architect}")
+print("Printing Ralph's house")
+ralph_house.print_self()
+print("End or printing Ralph's house")
+
+
+
 
 print("----------------------------------------------------")
 
@@ -68,3 +86,6 @@ print(f"Daniel's house bathrooms {daniel_house.bathrooms}")
 print(f"Daniel's house floor {daniel_house.floors}")
 print(f"Daniel's house area {daniel_house.area}")
 print(f"Daniel's house architect {daniel_house.architect}")
+print("Printing Daniel's house")
+daniel_house.print_self()
+print("End or printing Daniel's house")
