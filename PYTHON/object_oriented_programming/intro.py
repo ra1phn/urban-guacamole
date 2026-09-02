@@ -6,9 +6,11 @@ Concept in programming to make work easy by
 using principles
 1. Encapsulation
     -keeping data and methods<functions> inside a class
+    ()--> __init__, method, what is a property
     while restricting direct access to internal data. 
 2. Abstraction
     -Hiding unnecessary complexity or implrtation of details
+    --> getters and setters, class methods ,class properties
 3. Inheritance
     -one clas to reuse or extend properties 
     and methods of another class
