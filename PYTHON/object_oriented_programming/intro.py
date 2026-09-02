@@ -42,7 +42,13 @@ class House:
     location=""
     architect="KIMANI"
 
+    def __init__(self, owner, location):
+        print("Class house created. initializer called")
+        self.owner=owner
+        self.location=location
+
     def config(self, owner, location):
+        print("config method has run")
         self.owner=owner
         self.location=location
 
@@ -57,9 +63,11 @@ class House:
 
 # -method.config 
 # - print self
-ralph_house=House()
-ralph_house.owner="Ralph"
-ralph_house.location="Kikuyu"
+# instance class --> create an object from a class
+ralph_house=House(owner="Ralph",location="Kikuyu")
+# ralph_house.__init__()
+# ralph_house.owner="Ralph"
+# ralph_house.location="Kikuyu"
 print(f"Ralph's house owner {ralph_house.owner}")
 print(f"Ralph's house location {ralph_house.location}")
 print(f"Ralph's house bedrooms {ralph_house.bedrooms}")
@@ -76,9 +84,10 @@ print("End or printing Ralph's house")
 
 print("----------------------------------------------------")
 
-daniel_house=House()
-daniel_house.owner="Daniel"
-daniel_house.location="Muranga"
+daniel_house=House(owner="Daniel", location="Muranga") #__init__()
+# daniel_house.owner="Daniel"
+# daniel_house.location="Muranga"
+# daniel_house.config(owner="Daniel", location="Muranga")
 print(f"Daniel's house owner {daniel_house.owner}")
 print(f"Daniel's house location {daniel_house.location}")
 print(f"Daniel's house bedrooms {daniel_house.bedrooms}")
