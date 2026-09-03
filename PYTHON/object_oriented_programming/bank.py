@@ -17,14 +17,26 @@ class BankAccount:
 
     def __init__(self,name, balance,account_no):
         self.name=name
-        self.balance=balance
+        self._balance=balance
         self.account_no=account_no
 
-    #later change it to a getter
-    def get_balance(self):
-        pass
+    #data I read
+    @property
+    def balance(self):
+        print("Someone tried to read John's balance")
+        return self._balance
 
     #setter
+    @balance.setter
+    def deposit(self, value):
+        if not isinstance(value,(int,float)):
+            print("Ensure you pass a number for new balance")
+            return
+        if value <0:
+            print("Ensure new balance must not be less than 0")
+            return
+        self.balance=value
+
     def deposit(self):
         pass
 
