@@ -14,6 +14,8 @@ getter and setter. -->
 """
 
 class BankAccount:
+    clients=0 # static
+    bank_name="Post Bank" # static property
 
     def __init__(self,name, balance,account_no):
         self.name=name
@@ -26,7 +28,7 @@ class BankAccount:
         print("Someone tried to read John's balance")
         return self._balance
 
-    #setter
+    #to control updated
     @balance.setter
     def deposit(self, value):
         if not isinstance(value,(int,float)):
@@ -50,4 +52,7 @@ class BankAccount:
 
 john=BankAccount(name="John Mwangi", balance=0,account_no="123456")
 
-john.show_account_details()
+# john.show_account_details()
+print("Bank Name:", BankAccount.bank_name)
+print(john.account_no) # John
+print("Clients:", BankAccount.clients) #class property
